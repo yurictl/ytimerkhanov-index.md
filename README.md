@@ -1,7 +1,7 @@
 # Yuri Timerkhanov — Professional Index
 
-> **Senior Infrastructure Engineer & Automation Architect**
-> Malaysia · yutimer@gmail.com · [linkedin.com/in/ytimerkhanov](https://linkedin.com/in/ytimerkhanov)
+> **Senior DevOps & Cloud Platform Engineer | AI-Driven Automation on AWS, K8s, Terraform**
+> Malaysia · yutimer@gmail.com · [linkedin.com/in/ytimerkhanov](https://linkedin.com/in/ytimerkhanov) · [github.com/yurictl](https://github.com/yurictl)
 >
 > This file is the single navigable entry point to the portfolio. Everything links to a source file.
 
@@ -13,8 +13,9 @@ Senior System Engineer specializing in **R&D and Advanced Automation**. I bridge
 
 What drives me is not the technology itself. What I care about is the problem behind it: can this tool actually help the team, and how much time does it save?
 
-**Certifications:** CKA · AWS SysOps Administrator Associate · AWS AI Practitioner · HashiCorp Terraform Associate
-**Education:** Master's in Mathematics, Ural Federal University (2000–2006)
+**Experience:** 15 yrs in tech · 8 yrs DevOps · 7 yrs AWS · Former Oracle DBA (deep SQL tuning background)
+**Certifications (active):** CKA (until Mar 2027) · AWS SysOps Administrator Associate (until Dec 2025) · AWS AI Practitioner (until Oct 2027)
+**Education:** Master's in Mathematics, Ural State University (2000–2006)
 
 ---
 
@@ -25,10 +26,13 @@ What drives me is not the technology itself. What I care about is the problem be
 | AI & Automation | OpenAI API, Claude Code, RAG, Prompt Engineering, AI Agents |
 | Cloud | AWS (expert), Azure (novice) |
 | Containers | Docker, Kubernetes, Helm, Kustomize, ArgoCD, EKS, AKS |
-| CI/CD | GitHub Actions, GitLab CI/CD, Jenkins, Azure DevOps, Bitbucket |
+| CI/CD | GitHub Actions, GitLab CI/CD, Jenkins, Bitbucket, Roadie (Backstage) |
 | IaC & Scripting | Terraform, CloudFormation, Ansible, Python, Bash |
-| Monitoring | Prometheus, Grafana, ELK, CloudWatch, AppDynamics |
-| Databases | Oracle, Postgres, AuroraDB, DynamoDB, MongoDB |
+| IaC Quality | Terratest, Checkov, CIS Benchmarks, HashiCorp Vault |
+| Observability | Prometheus, Grafana, OpenTelemetry, CloudWatch, AppDynamics |
+| SRE | SLIs/SLOs, incident response, zero-downtime releases, FinOps |
+| MLOps | Kubeflow, MLflow, SageMaker |
+| Databases | Oracle (OCP certified), Postgres, AuroraDB, DynamoDB, MongoDB, Snowflake |
 
 ---
 
@@ -95,6 +99,19 @@ Projects are ordered by strategic impact. AI-in-DevOps projects come first — t
 ---
 
 ### Infrastructure & Platform Projects
+
+---
+
+#### Quantori IaC Platform — Multi-Database Provisioning & CI/CD Standardization
+
+- **Company:** Quantori
+- **Year / Duration:** 2024–2025 (ongoing)
+- **Stack:** Terraform, Terratest, GitHub Actions, Roadie (Backstage), Aurora, PostgreSQL, Oracle
+- **Role:** Senior System Engineer; owned IaC quality and database provisioning automation
+- **Problem:** 30+ Terraform modules had no unified testing framework — each team applied different patterns, making cross-team reuse brittle and review slow. Database provisioning (Aurora, PostgreSQL, Oracle) was manual across environments, generating operational overhead and human error. Junior DevOps hiring was ad hoc, with no structured onboarding pipeline.
+- **What Yuri did:** Built a unified CI/CD and end-to-end testing framework for all 30+ Terraform modules using standardized Terratest patterns. Standardized multi-database provisioning and configuration across environments. Automated Day-0 database setup via GitHub Actions and Roadie templates — developers get ready-to-use databases instantly without manual steps. Streamlined the technical interview process (unified questions, evaluation forms, feedback templates). Co-developed Cloud/DevOps School materials and practical labs to create a repeatable source of junior DevOps talent.
+- **Outcome:** Development time reduced 2–3×. Operational overhead for database provisioning cut ~40%. Interview throughput and TA pipeline efficiency improved ~30%.
+- **Source:** [`projects/quantori-iac-platform.md`](projects/quantori-iac-platform.md)
 
 ---
 
@@ -211,3 +228,18 @@ Structured answers organized by question type. Each file contains the core story
 | 3 — When It Went Wrong | Project that didn't go as planned, weakness, handling criticism | [`interview-prep/group-3-when-it-went-wrong.md`](interview-prep/group-3-when-it-went-wrong.md) |
 | 4 — Working With People | Teamwork, conflicts, explaining technical concepts | [`interview-prep/group-4-working-with-people.md`](interview-prep/group-4-working-with-people.md) |
 | 5 — How I Work | Prioritization, time management, staying current | [`interview-prep/group-5-how-i-work.md`](interview-prep/group-5-how-i-work.md) |
+
+---
+
+## Recommendations
+
+Three LinkedIn recommendations from direct collaborators.
+
+**Pavel Konan — CTO, Enginerasoft**
+> "I've had the pleasure of working with Yura Timerkhanov, and I can confidently say he's one of the most talented and dedicated engineers I've come across. With over 15 years of experience, Yura has a unique ability to tackle complex challenges, especially in cloud infrastructure and automation. His work on AWS migrations and DevOps pipelines consistently resulted in cost savings and improved efficiency. Beyond his technical expertise, Yura is a natural leader, always willing to mentor others and share his knowledge."
+
+**Dana Forberger MBA — Associate Director, Global Clinical Data Integration Operations, Merck**
+> "I worked with Yurii on developing a tool to help my users automate a major manual task. The tool developed reduces work time from approximately six months to about one week. Yurii was instrumental in developing the tool and understanding what my users wanted... Yurii was always on top of finding and resolving any challenges that developed and was proactive, honest, and vocal when communicating with me and the end users."
+
+**Sergey Samoylov — DevOps Engineer, former Sberbank-Technology**
+> "The main area of his tasks were resolving critical problems with over 2000 databases supported by our team. Especially great skills he showed during support of Oracle Databases Clusters and support of Machine Learning environment. Automation was another area where he demonstrated his high expert level. Yuriy always supported state of the art knowledge and shared it along colleagues helping them to achieve higher qualification level."
