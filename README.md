@@ -3,7 +3,7 @@
 > **Senior DevOps & Cloud Platform Engineer | AI-Driven Automation on AWS, K8s, Terraform**
 > Malaysia · yutimer@gmail.com · [linkedin.com/in/ytimerkhanov](https://linkedin.com/in/ytimerkhanov) · [github.com/yurictl](https://github.com/yurictl)
 >
-> This file is the single navigable entry point to the portfolio. Everything links to a source file.
+> Open to senior **AI Engineer / Platform Engineer** roles — remote, contract or full-time.
 
 ---
 
@@ -24,7 +24,7 @@ What drives me is not the technology itself. What I care about is the problem be
 | Domain | Tools & Technologies |
 |--------|----------------------|
 | AI & Automation | OpenAI API, Claude Code, RAG, Prompt Engineering, AI Agents |
-| Cloud | AWS (expert), Azure (novice) |
+| Cloud | AWS (expert), Azure |
 | Containers | Docker, Kubernetes, Helm, Kustomize, ArgoCD, EKS, AKS |
 | CI/CD | GitHub Actions, GitLab CI/CD, Jenkins, Bitbucket, Roadie (Backstage) |
 | IaC & Scripting | Terraform, CloudFormation, Ansible, Python, Bash |
@@ -38,10 +38,6 @@ What drives me is not the technology itself. What I care about is the problem be
 
 ## Projects
 
-Projects are ordered by strategic impact. AI-in-DevOps projects come first — they represent Yuri's clearest differentiator.
-
----
-
 ### AI & Automation Projects
 
 ---
@@ -53,9 +49,9 @@ Projects are ordered by strategic impact. AI-in-DevOps projects come first — t
 - **Stack:** Python, OpenAI GPT-4o / GPT-4o-mini, Docker, Terraform
 - **Role:** Solo builder — designed, implemented, and shipped
 - **Problem:** Terraform plan outputs can be 50KB+ of dense HCL. Reviewers would skim or miss destructive changes. Risk assessment was gated on senior engineers, creating a bottleneck — junior engineers couldn't safely approve production changes.
-- **What Yuri did:** Built a CLI tool that ingests a Terraform plan, summarizes it by resource type and change category (Add / Modify in-place / Replace / Destroy), assigns a risk level (LOW / MEDIUM / HIGH / CRITICAL), and writes the output as a PR comment and into ChatOps. Used GPT-4o-mini as the default (128k context, 15x cheaper than GPT-4) with temperature 0.2 for deterministic, safe output. ~240 lines of Python, containerized, non-root Docker execution.
+- **What I did:** Built a CLI tool that ingests a Terraform plan, summarizes it by resource type and change category (Add / Modify in-place / Replace / Destroy), assigns a risk level (LOW / MEDIUM / HIGH / CRITICAL), and writes the output as a PR comment and into ChatOps. Used GPT-4o-mini as the default (128k context, 15x cheaper than GPT-4) with temperature 0.2 for deterministic, safe output. ~240 lines of Python, containerized, non-root Docker execution.
 - **Outcome:** Plan review time down 87% (15 min → 2 min). Junior engineers could conduct reviews independently. 40% fewer senior escalations. Error diagnosis time cut by 60%.
-- **Source:** [`projects/terraGuide-ai.md`](projects/terraGuide-ai.md)
+- **Source:** [`projects/terraGuide-ai.md`](projects/terraGuide-ai.md) · [github.com/yurictl/terraguide-ai](https://github.com/yurictl/terraguide-ai)
 
 ---
 
@@ -66,7 +62,7 @@ Projects are ordered by strategic impact. AI-in-DevOps projects come first — t
 - **Stack:** Python, Azure OpenAI GPT-4o, Docker, BitBucket, Confluence API, HashiCorp Vault
 - **Role:** Solo builder — designed, implemented, and shipped
 - **Problem:** Operations teams needed a deployment guide for every Terraform module release — comparing the previous and current version, documenting variable changes, breaking changes, and step-by-step upgrade instructions. Writing one guide manually took 2–4 hours. With 20–40 releases per month, this was a constant ops bottleneck, and guides were inconsistent.
-- **What Yuri did:** Built a Dockerized tool that clones two repo versions (current and previous tags), computes diffs of README.md and CHANGELOG.md, constructs a domain-specific few-shot prompt, sends it to GPT-4o (temperature 0.2, 128k context), and publishes the result directly to Confluence. Authors review instead of writing from scratch. Secrets managed via Vault with temporary SSH key rotation.
+- **What I did:** Built a Dockerized tool that clones two repo versions (current and previous tags), computes diffs of README.md and CHANGELOG.md, constructs a domain-specific few-shot prompt, sends it to GPT-4o (temperature 0.2, 128k context), and publishes the result directly to Confluence. Authors review instead of writing from scratch. Secrets managed via Vault with temporary SSH key rotation.
 - **Outcome:** Documentation time reduced 95% (2–4 hours → 5–10 minutes). Consistency reached 100% (template-enforced). Error rate fell from ~10–15% to <2%. Cost per guide: $0.50–2 vs. $80–160 of manual labor. Break-even: under 1 month.
 - **Source:** [`projects/ai-release-notes.md`](projects/ai-release-notes.md)
 
@@ -79,7 +75,7 @@ Projects are ordered by strategic impact. AI-in-DevOps projects come first — t
 - **Stack:** Claude Code, Python, RenderCV (Typst), YAML, Git
 - **Role:** Designer and implementer
 - **Problem:** Heads of competence were spending 60–90 minutes per CV manually reformatting, tailoring, and quality-checking resumes for specific client roles. With multiple engineers in the pipeline, this was burning reviewers and producing inconsistent output.
-- **What Yuri did:** Standardized CV data into YAML (single source of truth) and built Claude Code slash commands ("Improve CV," "Tailor to Role," "Extract Skills/Gaps"). Batches of CVs run through automated workflows, producing a cleaned document plus a JSON summary (skills, seniority signals, risk flags). Reviewers make light edits and approve. Multi-format export (PDF, HTML, PNG, Markdown) in one command.
+- **What I did:** Standardized CV data into YAML (single source of truth) and built Claude Code slash commands ("Improve CV," "Tailor to Role," "Extract Skills/Gaps"). Batches of CVs run through automated workflows, producing a cleaned document plus a JSON summary (skills, seniority signals, risk flags). Reviewers make light edits and approve. Multi-format export (PDF, HTML, PNG, Markdown) in one command.
 - **Outcome:** Processing time cut 90% (60 min → 5 min per resume). Quality became consistent across roles. Throughput scaled without burning reviewers.
 - **Source:** [`projects/cv-as-a-code.md`](projects/cv-as-a-code.md)
 
@@ -92,7 +88,7 @@ Projects are ordered by strategic impact. AI-in-DevOps projects come first — t
 - **Stack:** Claude Code (LLM), internal corporate tooling
 - **Role:** Designer and implementer
 - **Problem:** Writing thorough, structured interview feedback took interviewers 60–90 minutes per candidate. This slowed hiring cycles and produced variable-quality feedback, making calibration between interviewers difficult.
-- **What Yuri did:** Built a tool that takes raw interviewer notes and 1–2 corporate-style exemplar feedback reports, feeds them to an LLM with stylistic constraints, and generates a structured draft — covering strengths, gaps, concrete behavioral examples, and next steps in the company's house tone. Interviewer reviews, tweaks, and posts.
+- **What I did:** Built a tool that takes raw interviewer notes and 1–2 corporate-style exemplar feedback reports, feeds them to an LLM with stylistic constraints, and generates a structured draft — covering strengths, gaps, concrete behavioral examples, and next steps in the company's house tone. Interviewer reviews, tweaks, and posts.
 - **Outcome:** Time per candidate down from 60–90 min to 5–10 min. Feedback quality became more consistent and actionable. Team built a reusable archive for calibration and future hiring.
 - **Source:** [`projects/candidate-feedback-tool.md`](projects/candidate-feedback-tool.md)
 
@@ -109,7 +105,7 @@ Projects are ordered by strategic impact. AI-in-DevOps projects come first — t
 - **Stack:** Terraform, Terratest, GitHub Actions, Roadie (Backstage), Aurora, PostgreSQL, Oracle
 - **Role:** Senior System Engineer; owned IaC quality and database provisioning automation
 - **Problem:** 30+ Terraform modules had no unified testing framework — each team applied different patterns, making cross-team reuse brittle and review slow. Database provisioning (Aurora, PostgreSQL, Oracle) was manual across environments, generating operational overhead and human error. Junior DevOps hiring was ad hoc, with no structured onboarding pipeline.
-- **What Yuri did:** Built a unified CI/CD and end-to-end testing framework for all 30+ Terraform modules using standardized Terratest patterns. Standardized multi-database provisioning and configuration across environments. Automated Day-0 database setup via GitHub Actions and Roadie templates — developers get ready-to-use databases instantly without manual steps. Streamlined the technical interview process (unified questions, evaluation forms, feedback templates). Co-developed Cloud/DevOps School materials and practical labs to create a repeatable source of junior DevOps talent.
+- **What I did:** Built a unified CI/CD and end-to-end testing framework for all 30+ Terraform modules using standardized Terratest patterns. Standardized multi-database provisioning and configuration across environments. Automated Day-0 database setup via GitHub Actions and Roadie templates — developers get ready-to-use databases instantly without manual steps. Streamlined the technical interview process (unified questions, evaluation forms, feedback templates). Co-developed Cloud/DevOps School materials and practical labs to create a repeatable source of junior DevOps talent.
 - **Outcome:** Development time reduced 2–3×. Operational overhead for database provisioning cut ~40%. Interview throughput and TA pipeline efficiency improved ~30%.
 - **Source:** [`projects/quantori-iac-platform.md`](projects/quantori-iac-platform.md)
 
@@ -122,8 +118,8 @@ Projects are ordered by strategic impact. AI-in-DevOps projects come first — t
 - **Stack:** Terraform, Terragrunt, EKS, AKS, Vault, Consul, Jenkins, Prometheus, Grafana, AppDynamics, Azure OpenAI
 - **Role:** Senior System Engineer; led multiple workstreams on a large internal developer platform (57 base modules, 293 component modules, 51 AWS accounts, 194 environments)
 - **Problem:** Three monitoring subscriptions (AppDynamics, Splunk) were costing $150,000/month and the company had set a hard end-of-year deadline to exit them. No migration plan existed, no one on the team had done this transition, and the architecture was undefined at the start.
-- **What Yuri did:** Led the POC for transitioning from AppDynamics to Prometheus + Grafana. Started by mapping actual requirements, then reached out to a neighboring team who had a relevant setup and adapted their approach rather than starting from scratch. While running the cost analysis for monitoring, noticed broader cloud spend anomalies — ran a full audit of backup policies, idle resources, and usage patterns (outside of original task scope).
-- **Outcome:** POC completed and became the migration plan's foundation. Annual cloud costs reduced by $100,000+, reversing a growing cost trend. Contributed to 25+ major Terraform module releases. Conducted 15+ technical interviews in 2024.
+- **What I did:** Led the POC for transitioning from AppDynamics to Prometheus + Grafana. Started by mapping actual requirements, then reached out to a neighboring team who had a relevant setup and adapted their approach rather than starting from scratch. While running the cost analysis for monitoring, noticed broader cloud spend anomalies — ran a full audit of backup policies, idle resources, and usage patterns (outside of original task scope).
+- **Outcome:** POC completed and became the migration plan's foundation. Annual cloud costs reduced by $100,000+, reversing a growing cost trend. Contributed to 25+ major Terraform module releases.
 - **Source:** [`projects/iad-framework.md`](projects/iad-framework.md)
 
 ---
@@ -135,7 +131,7 @@ Projects are ordered by strategic impact. AI-in-DevOps projects come first — t
 - **Stack:** Terraform, CloudFormation, GitHub Actions, GitLab CI/CD, ECS, Aurora DB, DynamoDB, VPC, IAM, Snowflake
 - **Role:** DevOps lead for a team of 10; owned all AWS infrastructure work
 - **Problem:** A large pharmaceutical company needed to migrate its Marketing Analytics Reporting System from SAP HANA to a cloud-native AWS + Snowflake stack. Simultaneously, GitLab support was ending — forcing a pipeline migration to GitHub. Infrastructure code coverage was at 70%, with 200+ AWS resources partly described in nested CloudFormation stacks and partly managed manually.
-- **What Yuri did:** Rewrote 3,500 lines of CloudFormation into reusable Terraform modules, importing all 200+ AWS resources without drift and without disrupting the team's ongoing work. Migrated CI/CD pipelines from GitLab to GitHub. Centralized all environment-specific configuration into GitHub configs and secrets (previously scattered in application code).
+- **What I did:** Rewrote 3,500 lines of CloudFormation into reusable Terraform modules, importing all 200+ AWS resources without drift and without disrupting the team's ongoing work. Migrated CI/CD pipelines from GitLab to GitHub. Centralized all environment-specific configuration into GitHub configs and secrets (previously scattered in application code).
 - **Outcome:** Project delivered on schedule. Infrastructure code coverage: 70% → 95%. Infrastructure costs reduced by 3x+. Deployments 4x faster. Knowledge transfer completed for the operations team.
 - **Source:** [`projects/sap-hana-snowflake-migration.md`](projects/sap-hana-snowflake-migration.md)
 
@@ -148,7 +144,7 @@ Projects are ordered by strategic impact. AI-in-DevOps projects come first — t
 - **Stack:** GitLab CI/CD, AWS SDK, API Gateway, CloudFront, Lambda, ECS (Fargate), SQS, DynamoDB, EC2, S3, IAM, Prometheus, Grafana
 - **Role:** Solo DevOps engineer — built everything from scratch
 - **Problem:** Business Analysts, Presales, and Architects had to request demo environments through the DevOps team — a slow, manual, blocking process. The goal: self-service provisioning in under 15 minutes, available company-wide.
-- **What Yuri did:** Engineered the full serverless architecture using AWS and GitLab CI/CD. Built CI/CD pipelines and AWS infrastructure from scratch. Designed and automated the provisioning process for two demo environment types: WordPress (3–5 min deploy via Fargate from custom image) and SAP Commerce 2105 / Hybris with Spartacus (<15 min deploy from pre-built AMI). Set up CloudWatch dashboards and a dedicated Grafana service with Prometheus for monitoring; integrated GitLab pipeline metrics with Teams alerts.
+- **What I did:** Engineered the full serverless architecture using AWS and GitLab CI/CD. Built CI/CD pipelines and AWS infrastructure from scratch. Designed and automated the provisioning process for two demo environment types: WordPress (3–5 min deploy via Fargate from custom image) and SAP Commerce 2105 / Hybris with Spartacus (<15 min deploy from pre-built AMI). Set up CloudWatch dashboards and a dedicated Grafana service with Prometheus for monitoring; integrated GitLab pipeline metrics with Teams alerts.
 - **Outcome:** Active development phase completed in 6 months. Tool shipped company-wide. Employees independently deploy temporary stands for presentations, theory checks, and functionality tests — no DevOps involvement required.
 - **Source:** [`projects/demo-booking-system.md`](projects/demo-booking-system.md)
 
@@ -160,8 +156,8 @@ Projects are ordered by strategic impact. AI-in-DevOps projects come first — t
 - **Year / Duration:** 2022, 6 months
 - **Stack:** Jenkins, Terraform, AWS (SageMaker, Cognito, ECS, ELB, EBS, Route53, Aurora DB), Python
 - **Role:** DevOps lead; joined an in-flight project 4 months in
-- **Problem:** A large pharmaceutical company was building an internal chatbot backed by an ML model (SageMaker) and a search engine (Coveo). When Yuri joined, the last release had taken a full month to prepare. Three environments (dev, staging, prod) had been set up manually by different people — configurations were inconsistent, and there was no automated deployment.
-- **What Yuri did:** Standardized IAM roles across all environments. Rewrote Terraform code from scratch, recreating some resources and importing others. Resolved the hardest blocker — Cognito configuration that required cross-team manual coordination — by systematically working through request processes. Built Jenkins CI/CD pipelines from scratch for all environments, including automated tests and static code analysis.
+- **Problem:** A large pharmaceutical company was building an internal chatbot backed by an ML model (SageMaker) and a search engine (Coveo). When I joined, the last release had taken a full month to prepare. Three environments (dev, staging, prod) had been set up manually by different people — configurations were inconsistent, and there was no automated deployment.
+- **What I did:** Standardized IAM roles across all environments. Rewrote Terraform code from scratch, recreating some resources and importing others. Resolved the hardest blocker — Cognito configuration that required cross-team manual coordination — by systematically working through request processes. Built Jenkins CI/CD pipelines from scratch for all environments, including automated tests and static code analysis.
 - **Outcome:** Release frequency: monthly → weekly. Releases became stable and predictable. The team could ship new features without DevOps becoming a bottleneck.
 - **Source:** [`projects/chatbot-systems.md`](projects/chatbot-systems.md)
 
@@ -173,8 +169,8 @@ Projects are ordered by strategic impact. AI-in-DevOps projects come first — t
 - **Year / Duration:** 2022, 9 months
 - **Stack:** Jenkins, Terraform, AWS (ECS, ELB, Route53, Glue, Lambda, DynamoDB), Python, Node.js
 - **Role:** DevOps lead from project inception; also mentored a junior DevOps engineer (client-side)
-- **Problem:** A tool to accelerate updates to CDISC (Clinical Data Interchange Standards Consortium) controlled terminologies — a process that previously took over a year to implement per cycle. The application was built from scratch; Yuri joined at the start.
-- **What Yuri did:** Established AWS infrastructure using Terraform from day zero, enabling the development team to work in parallel from the beginning. Built and fully automated CI/CD pipelines with Jenkins, replacing manual deployment. Mentored a junior DevOps engineer on the client side — setting tasks, reviewing work, and ensuring a clean project handover.
+- **Problem:** A tool to accelerate updates to CDISC (Clinical Data Interchange Standards Consortium) controlled terminologies — a process that previously took over a year to implement per cycle. The application was built from scratch; I joined at the start.
+- **What I did:** Established AWS infrastructure using Terraform from day zero, enabling the development team to work in parallel from the beginning. Built and fully automated CI/CD pipelines with Jenkins, replacing manual deployment. Mentored a junior DevOps engineer on the client side — setting tasks, reviewing work, and ensuring a clean project handover.
 - **Outcome:** Deployment time cut by 4x. Project handed over successfully with the junior engineer able to continue independently. Infrastructure remained stable after handover.
 - **Source:** [`projects/etl-report-generator.md`](projects/etl-report-generator.md)
 
@@ -187,7 +183,7 @@ Projects are ordered by strategic impact. AI-in-DevOps projects come first — t
 - **Stack:** Terraform, EKS, GitHub Actions, GitLab CI/CD, ECS, ECR, Kubeflow, Aurora DB, MongoDB, Glue, IAM
 - **Role:** Solo DevOps engineer; de facto Solution Architect (no architect on the team)
 - **Problem:** EPAM had an internal ML product sold as a client pilot. The client's tech stack was significantly different from the internal demo. No Solution Architect. Small team: 1 PM, 1 analyst, 1 full-stack developer, 2 data scientists. Hard demo deadline in two months.
-- **What Yuri did:** Took ownership of the target architecture from scratch — wrote all Terraform code for AWS resources including an EKS cluster. Migrated CI/CD pipelines from GitLab to GitHub. Created separate environments for development, testing, and client presentation. Shifted approach mid-project after PM feedback: stopped optimizing for "correct" architecture and prioritized demo readiness. Conducted knowledge transfer to a successor in one week.
+- **What I did:** Took ownership of the target architecture from scratch — wrote all Terraform code for AWS resources including an EKS cluster. Migrated CI/CD pipelines from GitLab to GitHub. Created separate environments for development, testing, and client presentation. Shifted approach mid-project after PM feedback: stopped optimizing for "correct" architecture and prioritized demo readiness. Conducted knowledge transfer to a successor in one week.
 - **Outcome:** Demo delivered on time. Client approved the project for further development. Lesson internalized: always anchor implementation to the current phase's definition of success.
 - **Source:** [`projects/price-elasticity-dashboard.md`](projects/price-elasticity-dashboard.md)
 
@@ -200,7 +196,7 @@ Projects are ordered by strategic impact. AI-in-DevOps projects come first — t
 - **Stack:** Ansible, Jenkins, Python, Bitbucket, Linux, Oracle, Postgres
 - **Role:** Infrastructure automation engineer
 - **Problem:** Database administrators had to request new Oracle or Postgres environments through a manual process that took two weeks end-to-end — across more than 3,000 databases in the bank's landscape.
-- **What Yuri did:** Built full automation for the bank's database provisioning pipeline using Ansible and Jenkins, integrating with monitoring and backup systems. Separately managed 5,000+ Oracle DB environments, improving automation via SQL procedures and reducing manual request volume by 20%.
+- **What I did:** Built full automation for the bank's database provisioning pipeline using Ansible and Jenkins, integrating with monitoring and backup systems. Separately managed 5,000+ Oracle DB environments, improving automation via SQL procedures and reducing manual request volume by 20%.
 - **Outcome:** Deployment time per database: 2 weeks → 2 hours. Scale: 3,000+ databases. Manual ticket volume down 20%.
 
 ---
