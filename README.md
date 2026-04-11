@@ -217,20 +217,6 @@ Projects are ordered by strategic impact. AI-in-DevOps projects come first — t
 
 ---
 
-## Interview Prep
-
-Structured answers organized by question type. Each file contains the core story plus variants for different framings.
-
-| Group | Topics | File |
-|-------|--------|------|
-| 1 — Who I Am | Self-pitch, key strengths, why this role | [`interview-prep/group-1-who-i-am.md`](interview-prep/group-1-who-i-am.md) |
-| 2 — Technical Project | Significant challenge, project I'm proud of, tight deadline | [`interview-prep/group-2-technical-project.md`](interview-prep/group-2-technical-project.md) |
-| 3 — When It Went Wrong | Project that didn't go as planned, weakness, handling criticism | [`interview-prep/group-3-when-it-went-wrong.md`](interview-prep/group-3-when-it-went-wrong.md) |
-| 4 — Working With People | Teamwork, conflicts, explaining technical concepts | [`interview-prep/group-4-working-with-people.md`](interview-prep/group-4-working-with-people.md) |
-| 5 — How I Work | Prioritization, time management, staying current | [`interview-prep/group-5-how-i-work.md`](interview-prep/group-5-how-i-work.md) |
-
----
-
 ## Recommendations
 
 Three LinkedIn recommendations from direct collaborators.
