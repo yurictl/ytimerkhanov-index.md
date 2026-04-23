@@ -42,6 +42,19 @@ What drives me is not the technology itself. What I care about is the problem be
 
 ---
 
+#### Agent-First Operating Model — Restructuring Platform Work Around AI Collaborators
+
+- **Company:** Quantori (enterprise client under NDA)
+- **Year / Duration:** 2025–2026 (ongoing)
+- **Stack:** Claude Code, Markdown + YAML frontmatter, Python, Make, Git; CLIs wired as skills (Confluence CLI, glab, jira-cli, AWS CLI)
+- **Role:** Designed and rolled out the agent-centric operating model across two greenfield project workspaces and the shared infra workspace
+- **Problem:** AI coding assistants moved from autocomplete to agents that read the repo, plan, and ship. Existing DevOps knowledge was optimized for humans — long Confluence pages, screenshots, tribal context — so agents reinvented conventions, revisited decisions that were already made, hit tooling gaps, and produced plausible-but-wrong output. The question stopped being "do we use AI" and became "what does our knowledge and tooling have to look like for an agent to be a productive contributor."
+- **What I did:** Put `CLAUDE.md` entry points at every level — workspace root, per-project, per-repo — so an agent spawned anywhere finds its brief. Made documentation machine-readable via mandatory YAML frontmatter (`title`, `summary`, `status`, `updated`) and a fixed status vocabulary so agents can filter and retrieve by structure. Enforced a 3+1 knowledge model (Orientation / Operations / Decisions / WIP) with a hard rule that WIP investigations must graduate into permanent docs or be deleted — stale hypotheses don't become agent ground truth. Built a mechanical validation loop (`make docs-check`, `make docs-index`) so agents can edit docs and self-check before commit. Wrote a tool registry with CLI version, auth path, verify command, and matching skill name for every external service — agents self-onboard tooling. Rolled out custom skills for recurring workflows (`/graduate`, `/start-wip`, `/audit-docs`, `/review`, `/security-review`). Published an approved-AI-tools reference that mapped corporate policy onto a repo-readable list. Set up persistent typed memory (user / feedback / project / reference) for cross-session context.
+- **Outcome:** Three workspaces run on the same agent-first operating model — consistent agent behaviour on conventions, tooling, git hygiene. 28 structured, indexed, machine-validated documents on the primary platform (9 ADRs + 19 operations runbooks) make agent output safer rather than plausible-but-wrong. Routine knowledge hygiene (scaffolding, validation, index rebuild, WIP graduation, audits) moved from "human remembers" to "agent runs the command." The same pattern carries into personal work (portfolio, drafts), compounding instead of being project-local. Shift in positioning: from "person who codes faster with AI" to "person who designs the operating model so other contributors — human or AI — can work without me as the bottleneck."
+- **Source:** [`projects/agent-first-operating-model.md`](projects/agent-first-operating-model.md)
+
+---
+
 #### TerraGuide AI — Terraform Plan Risk Analysis
 
 - **Company:** EPAM
@@ -95,6 +108,19 @@ What drives me is not the technology itself. What I care about is the problem be
 ---
 
 ### Infrastructure & Platform Projects
+
+---
+
+#### Enterprise R&D Data Platform — Fast Prototyping on Shared Corporate Infrastructure
+
+- **Company:** Quantori (enterprise client under NDA)
+- **Year / Duration:** 2025–2026 (ongoing)
+- **Stack:** AWS (Aurora Serverless v2, S3, SQS, ECR, KMS, IRSA), EKS (shared multi-tenant), Argo Workflows + Argo Events, ArgoCD, GitLab CI/CD, Terraform, Kustomize, Helm, Python 3.12 / FastAPI, OpenSearch, Trivy, SonarCloud, Claude Code
+- **Role:** Lead DevOps on the primary R&D data platform; Architect on a parallel greenfield project reusing the same operating framework
+- **Problem:** Greenfield R&D data platform under tight constraints — private subnets only, shared corporate VPC (contractors can't create their own), shared multi-tenant EKS cluster (namespace, not cluster), multiple contractor organizations on one AWS account with no pre-existing conventions. Building a custom platform from scratch would have burned sprints before a single domain feature shipped. A second greenfield project kicked off in parallel on a different AWS account with identical documentation, operations, and onboarding needs.
+- **What I did:** Shipped Phase 1 on the shared corporate cluster — serverless Postgres, workflow orchestration, FastAPI services, search — split into six focused repos for parallel team work. Forked and adapted the client's central DevOps platform repositories (EKS Terraform module, IAM framework, Helm chart, GitLab pipeline templates) into a local workspace instead of building a parallel platform. Captured a mid-project CD pivot as an ADR (GitLab kubectl/kustomize → ArgoCD GitOps once the upstream EKS module shipped) — no rewrite. Designed a 3+1 documentation framework (Orientation / Operations / Decisions / WIP) with a Python docs CLI and Makefile targets for scaffolding, validation, stale-doc detection, and index generation. Wrote 19 operations runbooks covering contractor network access, self-hosted GitLab Runner in VPC, IAM via the central framework, container hardening, two-job ECR auth pattern, container scanning, static analysis. Published an "AI Tools — Permitted Use" document that unblocked Claude Code adoption without waiting on corporate clarification. Replicated the full framework on the sister project in a separate AWS account and team.
+- **Outcome:** Primary platform reached a functional Phase 1 on shared corporate infrastructure without provisioning a custom VPC or cluster. 9 ADRs capture architectural decisions (including the CD pivot) as a supersede chain. 19 operations docs cover the developer lifecycle end-to-end. Two greenfield projects run on the same documentation, tooling, and Makefile framework across different AWS accounts and teams — the operating model is a reusable asset, not a one-off. Contractors from multiple organizations onboard from documentation rather than from tribal knowledge.
+- **Source:** [`projects/shared-platform-reuse-dx.md`](projects/shared-platform-reuse-dx.md)
 
 ---
 
