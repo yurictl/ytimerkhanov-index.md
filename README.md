@@ -1,20 +1,20 @@
 # Yuri Timerkhanov — Professional Index
 
-> **Senior DevOps & Cloud Platform Engineer | AI-Driven Automation on AWS, K8s, Terraform**
+> **Senior Platform / DevOps Engineer — AI-Assisted Workflows on AWS · Kubernetes · Terraform**
 > Malaysia · yutimer@gmail.com · [linkedin.com/in/ytimerkhanov](https://linkedin.com/in/ytimerkhanov) · [github.com/yurictl](https://github.com/yurictl)
 >
-> Open to senior **AI Engineer / Platform Engineer** roles — remote, contract or full-time.
+> Open to senior **Platform Engineer · DevOps · SRE** roles — remote, contract or full-time.
 
 ---
 
 ## Who I Am
 
-Senior System Engineer specializing in **R&D and Advanced Automation**. I bridge complex infrastructure and developer productivity by building self-service tools and AI-driven workflows — replacing routine maintenance with autonomous systems.
+Senior Platform / DevOps Engineer who builds Internal Developer Platforms, cloud automation on AWS + Kubernetes, and AI-assisted DevOps workflows in production. I bridge complex infrastructure and developer productivity by building self-service tools and AI-driven workflows — replacing routine maintenance with autonomous systems.
 
 What drives me is not the technology itself. What I care about is the problem behind it: can this tool actually help the team, and how much time does it save?
 
 **Experience:** 15 yrs in tech · 8 yrs DevOps · 7 yrs AWS · Former Oracle DBA (deep SQL tuning background)
-**Certifications (active):** CKA (until Mar 2027) · AWS SysOps Administrator Associate (until Dec 2025) · AWS AI Practitioner (until Oct 2027)
+**Certifications (active):** CKA (until Mar 2027) · AWS AI Practitioner (until Oct 2027)
 **Education:** Master's in Mathematics, Ural State University (2000–2006)
 
 ---
