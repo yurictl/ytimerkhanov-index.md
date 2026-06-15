@@ -9,11 +9,11 @@
 
 ## Who I Am
 
-Senior Platform / DevOps Engineer who builds Internal Developer Platforms, cloud automation on AWS + Kubernetes, and AI-assisted DevOps workflows in production. I bridge complex infrastructure and developer productivity by building self-service tools and AI-driven workflows — replacing routine maintenance with autonomous systems.
+Senior Platform / DevOps Engineer who turns infrastructure complexity into clarity. I build Internal Developer Platforms and AI-assisted workflows so engineers — human or agent — ship without me as the bottleneck: automate the routine, keep the judgment, build only what the problem needs and keep the engineer the pilot, not the passenger.
 
 What drives me is not the technology itself. What I care about is the problem behind it: can this tool actually help the team, and how much time does it save?
 
-**Experience:** 15 yrs in tech · 8 yrs DevOps · 7 yrs AWS · Former Oracle DBA (deep SQL tuning background)
+**Experience:** 20 yrs in tech · 9 yrs DevOps · 8 yrs AWS · Former Oracle DBA (deep SQL tuning background)
 **Certifications (active):** CKA (until Mar 2027) · AWS AI Practitioner (until Oct 2027)
 **Education:** Master's in Mathematics, Ural State University (2000–2006)
 
