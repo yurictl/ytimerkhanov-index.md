@@ -1,253 +1,119 @@
-# Yuri Timerkhanov — Professional Index
+# Yuri Timerkhanov — Senior Platform / DevOps Engineer
 
-> **Senior Platform / DevOps Engineer — AI-Assisted Workflows on AWS · Kubernetes · Terraform**
-> Malaysia · yutimer@gmail.com · [linkedin.com/in/ytimerkhanov](https://linkedin.com/in/ytimerkhanov) · [github.com/yurictl](https://github.com/yurictl)
+> **AI-assisted DevOps workflows · Internal Developer Platforms · AWS · Kubernetes · Terraform**
 >
-> Open to senior **Platform Engineer · DevOps · SRE** roles — remote, contract or full-time.
+> Malaysia · [yutimer@gmail.com](mailto:yutimer@gmail.com) · [LinkedIn](https://linkedin.com/in/ytimerkhanov) · [GitHub](https://github.com/yurictl)
+>
+> Open to senior **Platform Engineer**, **DevOps**, and **SRE** roles — remote, contract, or full-time.
+
+![AWS](https://img.shields.io/badge/AWS-8%20yrs-FF9900?logo=amazonaws&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-CKA%20active-326CE5?logo=kubernetes&logoColor=white)
+![Terraform](https://img.shields.io/badge/Terraform-IaC%20platforms-623CE4?logo=terraform&logoColor=white)
+![AI Automation](https://img.shields.io/badge/AI--in--DevOps-shipped%20tools-111827)
 
 ---
 
-## Who I Am
+## Fast Scan
 
-Senior Platform / DevOps Engineer who turns infrastructure complexity into clarity. I build Internal Developer Platforms and AI-assisted workflows so engineers — human or agent — ship without me as the bottleneck: automate the routine, keep the judgment, build only what the problem needs and keep the engineer the pilot, not the passenger.
+| Signal | Evidence |
+|--------|----------|
+| **Senior infrastructure depth** | 20 years in tech, 9 years in DevOps, 8 years with AWS, former Oracle DBA with deep SQL tuning background |
+| **AI-in-DevOps differentiator** | Built AI tools for Terraform plan review, release-note generation, CV processing, interview feedback, and agent-first documentation workflows |
+| **Platform engineering range** | Internal Developer Platforms, self-service provisioning, multi-repo IaC platforms, Kubernetes delivery, observability, FinOps, CI/CD standardization |
+| **Current positioning** | Designs operating models where engineers and AI agents can work safely from repo-readable documentation, validated workflows, and CLI-driven automation |
 
-What drives me is not the technology itself. What I care about is the problem behind it: can this tool actually help the team, and how much time does it save?
+## Portfolio Map
 
-**Experience:** 20 yrs in tech · 9 yrs DevOps · 8 yrs AWS · Former Oracle DBA (deep SQL tuning background)
-**Certifications (active):** CKA (until Mar 2027) · AWS AI Practitioner (until Oct 2027)
-**Education:** Master's in Mathematics, Ural State University (2000–2006)
+```mermaid
+flowchart LR
+    A["AI-in-DevOps Tools"] --> A1["Terraform plan risk analysis"]
+    A --> A2["Release notes generator"]
+    A --> A3["CV-as-code"]
+    A --> A4["Candidate feedback automation"]
+    A --> A5["Agent-first operating model"]
 
----
+    B["Platform Engineering"] --> B1["Enterprise R&D data platform"]
+    B --> B2["Quantori IaC platform"]
+    B --> B3["IAD / IDP platform"]
+    B --> B4["Demo environment self-service"]
+
+    C["Cloud Migration & Delivery"] --> C1["SAP HANA to AWS / Snowflake"]
+    C --> C2["MLOps pricing dashboard"]
+    C --> C3["Chatbot systems"]
+    C --> C4["Clinical ETL tooling"]
+
+    D["Database Automation"] --> D1["Day-0 self-service platform"]
+    D --> D2["Oracle and PostgreSQL provisioning"]
+```
+
+## Strongest Proof Points
+
+| Proof point | What changed | Source |
+|-------------|--------------|--------|
+| **AI Terraform review** | Review time reduced 87% (15 min to 2 min), senior escalations reduced 40%, error diagnosis time cut 60% | [TerraGuide AI](projects/terraGuide-ai.md) |
+| **AI release documentation** | Deployment guide creation reduced 95% (2-4 hours to 5-10 minutes), error rate fell from ~10-15% to under 2% | [AI Release Notes Generator](projects/ai-release-notes.md) |
+| **Agent-first platform work** | Three workspaces use the same agent-first operating model; 28 structured documents on the primary platform are indexed and mechanically validated | [Agent-First Operating Model](projects/agent-first-operating-model.md) |
+| **Enterprise shared platform reuse** | Two greenfield projects reuse the same documentation, tooling, and Makefile framework across different AWS accounts and teams | [Enterprise R&D Data Platform](projects/shared-platform-reuse-dx.md) |
+| **IaC and database platform standardization** | 30+ Terraform modules standardized; development time reduced 2-3x; database provisioning overhead cut ~40% | [Quantori IaC Platform](projects/quantori-iac-platform.md) |
+| **Cloud migration under delivery pressure** | 200+ AWS resources imported without drift; infra code coverage moved from 70% to 95%; deployments became 4x faster | [SAP HANA to AWS / Snowflake](projects/sap-hana-snowflake-migration.md) |
+| **Bank-scale self-service automation** | Database environment provisioning dropped from two weeks to 2 hours across 3,000+ databases | [Day-0 Self-Service Platform](projects/day-0-self-service-platform.md) |
+
+## AI & Automation Projects
+
+| Project | Focus | Stack | Case study |
+|---------|-------|-------|------------|
+| **Agent-First Operating Model** | Repo-readable documentation, agent onboarding, tool registries, custom AI workflows | Claude Code, Markdown/YAML, Python, Make, Git, Confluence CLI, glab, jira-cli, AWS CLI | [Read](projects/agent-first-operating-model.md) |
+| **TerraGuide AI** | Terraform plan risk analysis and failed-apply diagnosis | Python, OpenAI GPT-4o / GPT-4o-mini, Docker, Terraform | [Read](projects/terraGuide-ai.md) |
+| **AI Release Notes Generator** | Terraform module deployment guide generation | Python, Azure OpenAI GPT-4o, Docker, Bitbucket, Confluence API, Vault | [Read](projects/ai-release-notes.md) |
+| **CV-as-a-Code** | Resume data pipeline and role tailoring | Claude Code, Python, RenderCV, Typst, YAML, Git | [Read](projects/cv-as-a-code.md) |
+| **Candidate Feedback Tool** | Structured post-interview feedback generation | Claude Code, internal corporate tooling | [Read](projects/candidate-feedback-tool.md) |
+
+## Infrastructure & Platform Projects
+
+| Project | Focus | Stack | Case study |
+|---------|-------|-------|------------|
+| **Enterprise R&D Data Platform** | Fast greenfield delivery on shared corporate AWS/EKS infrastructure | AWS, EKS, Argo Workflows, ArgoCD, GitLab CI/CD, Terraform, Helm, Kustomize, FastAPI, OpenSearch | [Read](projects/shared-platform-reuse-dx.md) |
+| **Quantori IaC Platform** | Terraform module testing, database provisioning, CI/CD standardization | Terraform, Terratest, Checkov, GitHub Actions, Roadie, Aurora, PostgreSQL, Oracle | [Read](projects/quantori-iac-platform.md) |
+| **IAD / IDP Platform** | FinOps and monitoring migration on a large internal developer platform | Terraform, Terragrunt, EKS, AKS, Vault, Consul, Jenkins, Prometheus, Grafana, AppDynamics | [Read](projects/iad-framework.md) |
+| **SAP HANA to AWS / Snowflake Migration** | Cloud migration, Terraform rewrite, CI/CD migration | Terraform, CloudFormation, GitHub Actions, GitLab CI/CD, ECS, Aurora DB, DynamoDB, Snowflake | [Read](projects/sap-hana-snowflake-migration.md) |
+| **Booking System for Demo Environments** | Company-wide self-service demo environment provisioning | GitLab CI/CD, AWS SDK, API Gateway, CloudFront, Lambda, ECS Fargate, SQS, DynamoDB, Prometheus, Grafana | [Read](projects/demo-booking-system.md) |
+| **Chatbot Systems** | Stable weekly releases for an internal ML-backed chatbot | Jenkins, Terraform, AWS SageMaker, Cognito, ECS, Route53, Aurora DB, Python | [Read](projects/chatbot-systems.md) |
+| **ETL & Report Generator** | Clinical data infrastructure and CI/CD from project inception | Jenkins, Terraform, AWS ECS, Glue, Lambda, DynamoDB, Python, Node.js | [Read](projects/etl-report-generator.md) |
+| **Price Elasticity Dashboard** | MLOps architecture for a client pilot | Terraform, EKS, GitHub Actions, Kubeflow, Aurora DB, MongoDB, Glue, IAM | [Read](projects/price-elasticity-dashboard.md) |
+| **Day-0 Self-Service Platform** | Bank-scale Oracle/PostgreSQL environment automation | Ansible, Jenkins, Python, Bitbucket, Linux, Oracle, PostgreSQL | [Read](projects/day-0-self-service-platform.md) |
 
 ## Skills Snapshot
 
 | Domain | Tools & Technologies |
 |--------|----------------------|
-| AI & Automation | OpenAI API, Claude Code, RAG, Prompt Engineering, AI Agents |
-| Cloud | AWS (expert), Azure |
-| Containers | Docker, Kubernetes, Helm, Kustomize, ArgoCD, EKS, AKS |
-| CI/CD | GitHub Actions, GitLab CI/CD, Jenkins, Bitbucket, Roadie (Backstage) |
-| IaC & Scripting | Terraform, CloudFormation, Ansible, Python, Bash |
-| IaC Quality | Terratest, Checkov, CIS Benchmarks, HashiCorp Vault |
-| Observability | Prometheus, Grafana, OpenTelemetry, CloudWatch, AppDynamics |
-| SRE | SLIs/SLOs, incident response, zero-downtime releases, FinOps |
-| MLOps | Kubeflow, MLflow, SageMaker |
-| Databases | Oracle (OCP certified), Postgres, AuroraDB, DynamoDB, MongoDB, Snowflake |
-
----
-
-## Projects
-
-### AI & Automation Projects
-
----
-
-#### Agent-First Operating Model — Restructuring Platform Work Around AI Collaborators
-
-- **Company:** Quantori (enterprise client under NDA)
-- **Year / Duration:** 2025–2026 (ongoing)
-- **Stack:** Claude Code, Markdown + YAML frontmatter, Python, Make, Git; CLIs wired as skills (Confluence CLI, glab, jira-cli, AWS CLI)
-- **Role:** Designed and rolled out the agent-centric operating model across two greenfield project workspaces and the shared infra workspace
-- **Problem:** AI coding assistants moved from autocomplete to agents that read the repo, plan, and ship. Existing DevOps knowledge was optimized for humans — long Confluence pages, screenshots, tribal context — so agents reinvented conventions, revisited decisions that were already made, hit tooling gaps, and produced plausible-but-wrong output. The question stopped being "do we use AI" and became "what does our knowledge and tooling have to look like for an agent to be a productive contributor."
-- **What I did:** Put `CLAUDE.md` entry points at every level — workspace root, per-project, per-repo — so an agent spawned anywhere finds its brief. Made documentation machine-readable via mandatory YAML frontmatter (`title`, `summary`, `status`, `updated`) and a fixed status vocabulary so agents can filter and retrieve by structure. Enforced a 3+1 knowledge model (Orientation / Operations / Decisions / WIP) with a hard rule that WIP investigations must graduate into permanent docs or be deleted — stale hypotheses don't become agent ground truth. Built a mechanical validation loop (`make docs-check`, `make docs-index`) so agents can edit docs and self-check before commit. Wrote a tool registry with CLI version, auth path, verify command, and matching skill name for every external service — agents self-onboard tooling. Rolled out custom skills for recurring workflows (`/graduate`, `/start-wip`, `/audit-docs`, `/review`, `/security-review`). Published an approved-AI-tools reference that mapped corporate policy onto a repo-readable list. Set up persistent typed memory (user / feedback / project / reference) for cross-session context.
-- **Outcome:** Three workspaces run on the same agent-first operating model — consistent agent behaviour on conventions, tooling, git hygiene. 28 structured, indexed, machine-validated documents on the primary platform (9 ADRs + 19 operations runbooks) make agent output safer rather than plausible-but-wrong. Routine knowledge hygiene (scaffolding, validation, index rebuild, WIP graduation, audits) moved from "human remembers" to "agent runs the command." The same pattern carries into personal work (portfolio, drafts), compounding instead of being project-local. Shift in positioning: from "person who codes faster with AI" to "person who designs the operating model so other contributors — human or AI — can work without me as the bottleneck."
-- **Source:** [`projects/agent-first-operating-model.md`](projects/agent-first-operating-model.md)
-
----
-
-#### TerraGuide AI — Terraform Plan Risk Analysis
-
-- **Company:** EPAM
-- **Year / Duration:** 2024
-- **Stack:** Python, OpenAI GPT-4o / GPT-4o-mini, Docker, Terraform
-- **Role:** Solo builder — designed, implemented, and shipped
-- **Problem:** Terraform plan outputs can be 50KB+ of dense HCL. Reviewers would skim or miss destructive changes. Risk assessment was gated on senior engineers, creating a bottleneck — junior engineers couldn't safely approve production changes.
-- **What I did:** Built a CLI tool that ingests a Terraform plan, summarizes it by resource type and change category (Add / Modify in-place / Replace / Destroy), assigns a risk level (LOW / MEDIUM / HIGH / CRITICAL), and writes the output as a PR comment and into ChatOps. Used GPT-4o-mini as the default (128k context, 15x cheaper than GPT-4) with temperature 0.2 for deterministic, safe output. ~240 lines of Python, containerized, non-root Docker execution.
-- **Outcome:** Plan review time down 87% (15 min → 2 min). Junior engineers could conduct reviews independently. 40% fewer senior escalations. Error diagnosis time cut by 60%.
-- **Source:** [`projects/terraGuide-ai.md`](projects/terraGuide-ai.md) · [github.com/yurictl/terraguide-ai](https://github.com/yurictl/terraguide-ai)
-
----
-
-#### AI Release Notes Generator — Terraform Module Deployment Guides
-
-- **Company:** EPAM
-- **Year / Duration:** 2024
-- **Stack:** Python, Azure OpenAI GPT-4o, Docker, BitBucket, Confluence API, HashiCorp Vault
-- **Role:** Solo builder — designed, implemented, and shipped
-- **Problem:** Operations teams needed a deployment guide for every Terraform module release — comparing the previous and current version, documenting variable changes, breaking changes, and step-by-step upgrade instructions. Writing one guide manually took 2–4 hours. With 20–40 releases per month, this was a constant ops bottleneck, and guides were inconsistent.
-- **What I did:** Built a Dockerized tool that clones two repo versions (current and previous tags), computes diffs of README.md and CHANGELOG.md, constructs a domain-specific few-shot prompt, sends it to GPT-4o (temperature 0.2, 128k context), and publishes the result directly to Confluence. Authors review instead of writing from scratch. Secrets managed via Vault with temporary SSH key rotation.
-- **Outcome:** Documentation time reduced 95% (2–4 hours → 5–10 minutes). Consistency reached 100% (template-enforced). Error rate fell from ~10–15% to <2%. Cost per guide: $0.50–2 vs. $80–160 of manual labor. Break-even: under 1 month.
-- **Source:** [`projects/ai-release-notes.md`](projects/ai-release-notes.md)
-
----
-
-#### CV-as-a-Code with Claude Code — Hiring Pipeline Automation
-
-- **Company:** Quantori
-- **Year / Duration:** 2025
-- **Stack:** Claude Code, Python, RenderCV (Typst), YAML, Git
-- **Role:** Designer and implementer
-- **Problem:** Heads of competence were spending 60–90 minutes per CV manually reformatting, tailoring, and quality-checking resumes for specific client roles. With multiple engineers in the pipeline, this was burning reviewers and producing inconsistent output.
-- **What I did:** Standardized CV data into YAML (single source of truth) and built Claude Code slash commands ("Improve CV," "Tailor to Role," "Extract Skills/Gaps"). Batches of CVs run through automated workflows, producing a cleaned document plus a JSON summary (skills, seniority signals, risk flags). Reviewers make light edits and approve. Multi-format export (PDF, HTML, PNG, Markdown) in one command.
-- **Outcome:** Processing time cut 90% (60 min → 5 min per resume). Quality became consistent across roles. Throughput scaled without burning reviewers.
-- **Source:** [`projects/cv-as-a-code.md`](projects/cv-as-a-code.md)
-
----
-
-#### Candidate Feedback Tool — Post-Interview Automation
-
-- **Company:** Quantori
-- **Year / Duration:** 2025
-- **Stack:** Claude Code (LLM), internal corporate tooling
-- **Role:** Designer and implementer
-- **Problem:** Writing thorough, structured interview feedback took interviewers 60–90 minutes per candidate. This slowed hiring cycles and produced variable-quality feedback, making calibration between interviewers difficult.
-- **What I did:** Built a tool that takes raw interviewer notes and 1–2 corporate-style exemplar feedback reports, feeds them to an LLM with stylistic constraints, and generates a structured draft — covering strengths, gaps, concrete behavioral examples, and next steps in the company's house tone. Interviewer reviews, tweaks, and posts.
-- **Outcome:** Time per candidate down from 60–90 min to 5–10 min. Feedback quality became more consistent and actionable. Team built a reusable archive for calibration and future hiring.
-- **Source:** [`projects/candidate-feedback-tool.md`](projects/candidate-feedback-tool.md)
-
----
-
-### Infrastructure & Platform Projects
-
----
-
-#### Enterprise R&D Data Platform — Fast Prototyping on Shared Corporate Infrastructure
-
-- **Company:** Quantori (enterprise client under NDA)
-- **Year / Duration:** 2025–2026 (ongoing)
-- **Stack:** AWS (Aurora Serverless v2, S3, SQS, ECR, KMS, IRSA), EKS (shared multi-tenant), Argo Workflows + Argo Events, ArgoCD, GitLab CI/CD, Terraform, Kustomize, Helm, Python 3.12 / FastAPI, OpenSearch, Trivy, SonarCloud, Claude Code
-- **Role:** Lead DevOps on the primary R&D data platform; Architect on a parallel greenfield project reusing the same operating framework
-- **Problem:** Greenfield R&D data platform under tight constraints — private subnets only, shared corporate VPC (contractors can't create their own), shared multi-tenant EKS cluster (namespace, not cluster), multiple contractor organizations on one AWS account with no pre-existing conventions. Building a custom platform from scratch would have burned sprints before a single domain feature shipped. A second greenfield project kicked off in parallel on a different AWS account with identical documentation, operations, and onboarding needs.
-- **What I did:** Shipped Phase 1 on the shared corporate cluster — serverless Postgres, workflow orchestration, FastAPI services, search — split into six focused repos for parallel team work. Forked and adapted the client's central DevOps platform repositories (EKS Terraform module, IAM framework, Helm chart, GitLab pipeline templates) into a local workspace instead of building a parallel platform. Captured a mid-project CD pivot as an ADR (GitLab kubectl/kustomize → ArgoCD GitOps once the upstream EKS module shipped) — no rewrite. Designed a 3+1 documentation framework (Orientation / Operations / Decisions / WIP) with a Python docs CLI and Makefile targets for scaffolding, validation, stale-doc detection, and index generation. Wrote 19 operations runbooks covering contractor network access, self-hosted GitLab Runner in VPC, IAM via the central framework, container hardening, two-job ECR auth pattern, container scanning, static analysis. Published an "AI Tools — Permitted Use" document that unblocked Claude Code adoption without waiting on corporate clarification. Replicated the full framework on the sister project in a separate AWS account and team.
-- **Outcome:** Primary platform reached a functional Phase 1 on shared corporate infrastructure without provisioning a custom VPC or cluster. 9 ADRs capture architectural decisions (including the CD pivot) as a supersede chain. 19 operations docs cover the developer lifecycle end-to-end. Two greenfield projects run on the same documentation, tooling, and Makefile framework across different AWS accounts and teams — the operating model is a reusable asset, not a one-off. Contractors from multiple organizations onboard from documentation rather than from tribal knowledge.
-- **Source:** [`projects/shared-platform-reuse-dx.md`](projects/shared-platform-reuse-dx.md)
-
----
-
-#### Quantori IaC Platform — Multi-Database Provisioning & CI/CD Standardization
-
-- **Company:** Quantori
-- **Year / Duration:** 2024–2025 (ongoing)
-- **Stack:** Terraform, Terratest, GitHub Actions, Roadie (Backstage), Aurora, PostgreSQL, Oracle
-- **Role:** Senior System Engineer; owned IaC quality and database provisioning automation
-- **Problem:** 30+ Terraform modules had no unified testing framework — each team applied different patterns, making cross-team reuse brittle and review slow. Database provisioning (Aurora, PostgreSQL, Oracle) was manual across environments, generating operational overhead and human error. Junior DevOps hiring was ad hoc, with no structured onboarding pipeline.
-- **What I did:** Built a unified CI/CD and end-to-end testing framework for all 30+ Terraform modules using standardized Terratest patterns. Standardized multi-database provisioning and configuration across environments. Automated Day-0 database setup via GitHub Actions and Roadie templates — developers get ready-to-use databases instantly without manual steps. Streamlined the technical interview process (unified questions, evaluation forms, feedback templates). Co-developed Cloud/DevOps School materials and practical labs to create a repeatable source of junior DevOps talent.
-- **Outcome:** Development time reduced 2–3×. Operational overhead for database provisioning cut ~40%. Interview throughput and TA pipeline efficiency improved ~30%.
-- **Source:** [`projects/quantori-iac-platform.md`](projects/quantori-iac-platform.md)
-
----
-
-#### IAD Framework / IDP Platform — FinOps & Monitoring Migration
-
-- **Company:** EPAM
-- **Year / Duration:** 2023–2024, ~1 year
-- **Stack:** Terraform, Terragrunt, EKS, AKS, Vault, Consul, Jenkins, Prometheus, Grafana, AppDynamics, Azure OpenAI
-- **Role:** Senior System Engineer; led multiple workstreams on a large internal developer platform (57 base modules, 293 component modules, 51 AWS accounts, 194 environments)
-- **Problem:** Three monitoring subscriptions (AppDynamics, Splunk) were costing $150,000/month and the company had set a hard end-of-year deadline to exit them. No migration plan existed, no one on the team had done this transition, and the architecture was undefined at the start.
-- **What I did:** Led the POC for transitioning from AppDynamics to Prometheus + Grafana. Started by mapping actual requirements, then reached out to a neighboring team who had a relevant setup and adapted their approach rather than starting from scratch. While running the cost analysis for monitoring, noticed broader cloud spend anomalies — ran a full audit of backup policies, idle resources, and usage patterns (outside of original task scope).
-- **Outcome:** POC completed and became the migration plan's foundation. Annual cloud costs reduced by $100,000+, reversing a growing cost trend. Contributed to 25+ major Terraform module releases.
-- **Source:** [`projects/iad-framework.md`](projects/iad-framework.md)
-
----
-
-#### SAP HANA → AWS / Snowflake Migration
-
-- **Company:** EPAM
-- **Year / Duration:** 2023, 8 months
-- **Stack:** Terraform, CloudFormation, GitHub Actions, GitLab CI/CD, ECS, Aurora DB, DynamoDB, VPC, IAM, Snowflake
-- **Role:** DevOps lead for a team of 10; owned all AWS infrastructure work
-- **Problem:** A large pharmaceutical company needed to migrate its Marketing Analytics Reporting System from SAP HANA to a cloud-native AWS + Snowflake stack. Simultaneously, GitLab support was ending — forcing a pipeline migration to GitHub. Infrastructure code coverage was at 70%, with 200+ AWS resources partly described in nested CloudFormation stacks and partly managed manually.
-- **What I did:** Rewrote 3,500 lines of CloudFormation into reusable Terraform modules, importing all 200+ AWS resources without drift and without disrupting the team's ongoing work. Migrated CI/CD pipelines from GitLab to GitHub. Centralized all environment-specific configuration into GitHub configs and secrets (previously scattered in application code).
-- **Outcome:** Project delivered on schedule. Infrastructure code coverage: 70% → 95%. Infrastructure costs reduced by 3x+. Deployments 4x faster. Knowledge transfer completed for the operations team.
-- **Source:** [`projects/sap-hana-snowflake-migration.md`](projects/sap-hana-snowflake-migration.md)
-
----
-
-#### Booking System for Demo Environments
-
-- **Company:** EPAM (internal product)
-- **Year / Duration:** 2021, 6 months
-- **Stack:** GitLab CI/CD, AWS SDK, API Gateway, CloudFront, Lambda, ECS (Fargate), SQS, DynamoDB, EC2, S3, IAM, Prometheus, Grafana
-- **Role:** Solo DevOps engineer — built everything from scratch
-- **Problem:** Business Analysts, Presales, and Architects had to request demo environments through the DevOps team — a slow, manual, blocking process. The goal: self-service provisioning in under 15 minutes, available company-wide.
-- **What I did:** Engineered the full serverless architecture using AWS and GitLab CI/CD. Built CI/CD pipelines and AWS infrastructure from scratch. Designed and automated the provisioning process for two demo environment types: WordPress (3–5 min deploy via Fargate from custom image) and SAP Commerce 2105 / Hybris with Spartacus (<15 min deploy from pre-built AMI). Set up CloudWatch dashboards and a dedicated Grafana service with Prometheus for monitoring; integrated GitLab pipeline metrics with Teams alerts.
-- **Outcome:** Active development phase completed in 6 months. Tool shipped company-wide. Employees independently deploy temporary stands for presentations, theory checks, and functionality tests — no DevOps involvement required.
-- **Source:** [`projects/demo-booking-system.md`](projects/demo-booking-system.md)
-
----
-
-#### Chatbot Systems — Internal Employee Chatbot
-
-- **Company:** EPAM
-- **Year / Duration:** 2022, 6 months
-- **Stack:** Jenkins, Terraform, AWS (SageMaker, Cognito, ECS, ELB, EBS, Route53, Aurora DB), Python
-- **Role:** DevOps lead; joined an in-flight project 4 months in
-- **Problem:** A large pharmaceutical company was building an internal chatbot backed by an ML model (SageMaker) and a search engine (Coveo). When I joined, the last release had taken a full month to prepare. Three environments (dev, staging, prod) had been set up manually by different people — configurations were inconsistent, and there was no automated deployment.
-- **What I did:** Standardized IAM roles across all environments. Rewrote Terraform code from scratch, recreating some resources and importing others. Resolved the hardest blocker — Cognito configuration that required cross-team manual coordination — by systematically working through request processes. Built Jenkins CI/CD pipelines from scratch for all environments, including automated tests and static code analysis.
-- **Outcome:** Release frequency: monthly → weekly. Releases became stable and predictable. The team could ship new features without DevOps becoming a bottleneck.
-- **Source:** [`projects/chatbot-systems.md`](projects/chatbot-systems.md)
-
----
-
-#### ETL & Report Generator — Clinical Data Tooling
-
-- **Company:** EPAM
-- **Year / Duration:** 2022, 9 months
-- **Stack:** Jenkins, Terraform, AWS (ECS, ELB, Route53, Glue, Lambda, DynamoDB), Python, Node.js
-- **Role:** DevOps lead from project inception; also mentored a junior DevOps engineer (client-side)
-- **Problem:** A tool to accelerate updates to CDISC (Clinical Data Interchange Standards Consortium) controlled terminologies — a process that previously took over a year to implement per cycle. The application was built from scratch; I joined at the start.
-- **What I did:** Established AWS infrastructure using Terraform from day zero, enabling the development team to work in parallel from the beginning. Built and fully automated CI/CD pipelines with Jenkins, replacing manual deployment. Mentored a junior DevOps engineer on the client side — setting tasks, reviewing work, and ensuring a clean project handover.
-- **Outcome:** Deployment time cut by 4x. Project handed over successfully with the junior engineer able to continue independently. Infrastructure remained stable after handover.
-- **Source:** [`projects/etl-report-generator.md`](projects/etl-report-generator.md)
-
----
-
-#### Price Elasticity Dashboard — MLOps for Pricing Analytics
-
-- **Company:** EPAM
-- **Year / Duration:** 2023, 3 months
-- **Stack:** Terraform, EKS, GitHub Actions, GitLab CI/CD, ECS, ECR, Kubeflow, Aurora DB, MongoDB, Glue, IAM
-- **Role:** Solo DevOps engineer; de facto Solution Architect (no architect on the team)
-- **Problem:** EPAM had an internal ML product sold as a client pilot. The client's tech stack was significantly different from the internal demo. No Solution Architect. Small team: 1 PM, 1 analyst, 1 full-stack developer, 2 data scientists. Hard demo deadline in two months.
-- **What I did:** Took ownership of the target architecture from scratch — wrote all Terraform code for AWS resources including an EKS cluster. Migrated CI/CD pipelines from GitLab to GitHub. Created separate environments for development, testing, and client presentation. Shifted approach mid-project after PM feedback: stopped optimizing for "correct" architecture and prioritized demo readiness. Conducted knowledge transfer to a successor in one week.
-- **Outcome:** Demo delivered on time. Client approved the project for further development. Lesson internalized: always anchor implementation to the current phase's definition of success.
-- **Source:** [`projects/price-elasticity-dashboard.md`](projects/price-elasticity-dashboard.md)
-
----
-
-#### Day-0 Self-Service Platform — Database Automation at Scale
-
-- **Company:** Sber (European bank, 109M clients, 300K employees)
-- **Year / Duration:** 2015–2021, 2.5 years core project
-- **Stack:** Ansible, Jenkins, Python, Bitbucket, Linux, Oracle, Postgres
-- **Role:** Infrastructure automation engineer
-- **Problem:** Database administrators had to request new Oracle or Postgres environments through a manual process that took two weeks end-to-end — across more than 3,000 databases in the bank's landscape.
-- **What I did:** Built full automation for the bank's database provisioning pipeline using Ansible and Jenkins, integrating with monitoring and backup systems. Separately managed 5,000+ Oracle DB environments, improving automation via SQL procedures and reducing manual request volume by 20%.
-- **Outcome:** Deployment time per database: 2 weeks → 2 hours. Scale: 3,000+ databases. Manual ticket volume down 20%.
-
----
+| **AI & Automation** | OpenAI API, Claude Code, RAG, prompt engineering, AI agents, repo-readable operating models |
+| **Cloud** | AWS, Azure |
+| **Containers** | Docker, Kubernetes, Helm, Kustomize, ArgoCD, EKS, AKS |
+| **CI/CD** | GitHub Actions, GitLab CI/CD, Jenkins, Bitbucket, Roadie / Backstage |
+| **IaC & Scripting** | Terraform, CloudFormation, Ansible, Python, Bash |
+| **IaC Quality** | Terratest, Checkov, CIS Benchmarks, HashiCorp Vault |
+| **Observability** | Prometheus, Grafana, OpenTelemetry, CloudWatch, AppDynamics |
+| **SRE** | SLIs/SLOs, incident response, zero-downtime releases, FinOps |
+| **MLOps** | Kubeflow, MLflow, SageMaker |
+| **Databases** | Oracle, PostgreSQL, Aurora DB, DynamoDB, MongoDB, Snowflake |
 
 ## Career Timeline
 
 | Period | Role | Company |
 |--------|------|---------|
-| 11/2024 – present | Senior System Engineer | Quantori |
-| 06/2021 – 11/2024 | Senior System Engineer | EPAM |
-| 01/2015 – 06/2021 | Senior DevOps / Automation Engineer | Sber |
-| 02/2009 – 01/2015 | System Engineer | MegaFon |
-| 01/2005 – 12/2008 | System Administrator | Rostelecom |
+| 11/2024 - present | Senior System Engineer | Quantori |
+| 06/2021 - 11/2024 | Senior System Engineer | EPAM |
+| 01/2015 - 06/2021 | Senior DevOps / Automation Engineer | Sber |
+| 02/2009 - 01/2015 | System Engineer | MegaFon |
+| 01/2005 - 12/2008 | System Administrator | Rostelecom |
 
----
+## Credentials
+
+- **Certifications:** Certified Kubernetes Administrator (active until Mar 2027), AWS Certified AI Practitioner (active until Oct 2027)
+- **Education:** Master's in Mathematics, Ural State University (2000-2006)
 
 ## Recommendations
 
-Three LinkedIn recommendations from direct collaborators.
-
-**Pavel Konan — CTO, Enginerasoft**
-> "I've had the pleasure of working with Yura Timerkhanov, and I can confidently say he's one of the most talented and dedicated engineers I've come across. With over 15 years of experience, Yura has a unique ability to tackle complex challenges, especially in cloud infrastructure and automation. His work on AWS migrations and DevOps pipelines consistently resulted in cost savings and improved efficiency. Beyond his technical expertise, Yura is a natural leader, always willing to mentor others and share his knowledge."
-
-**Dana Forberger MBA — Associate Director, Global Clinical Data Integration Operations, Merck**
-> "I worked with Yurii on developing a tool to help my users automate a major manual task. The tool developed reduces work time from approximately six months to about one week. Yurii was instrumental in developing the tool and understanding what my users wanted... Yurii was always on top of finding and resolving any challenges that developed and was proactive, honest, and vocal when communicating with me and the end users."
-
-**Sergey Samoylov — DevOps Engineer, former Sberbank-Technology**
-> "The main area of his tasks were resolving critical problems with over 2000 databases supported by our team. Especially great skills he showed during support of Oracle Databases Clusters and support of Machine Learning environment. Automation was another area where he demonstrated his high expert level. Yuriy always supported state of the art knowledge and shared it along colleagues helping them to achieve higher qualification level."
+- **Pavel Konan, CTO, Enginerasoft:** highlighted senior-level cloud infrastructure, automation, AWS migration, DevOps pipeline, mentoring, and knowledge-sharing strengths.
+- **Dana Forberger MBA, Associate Director, Global Clinical Data Integration Operations, Merck:** highlighted ownership of an automation tool that reduced a major manual process from approximately six months to about one week.
+- **Sergey Samoylov, DevOps Engineer, former Sberbank-Technology:** highlighted critical database support, Oracle cluster work, machine learning environment support, and high-level automation expertise.
