@@ -31,6 +31,7 @@ flowchart LR
     A --> A3["CV-as-code"]
     A --> A4["Candidate feedback automation"]
     A --> A5["Agent-first operating model"]
+    A --> A6["AI agent evaluation and judging"]
 
     B["Platform Engineering"] --> B1["Enterprise R&D data platform"]
     B --> B2["Quantori IaC platform"]
@@ -53,6 +54,7 @@ flowchart LR
 | **AI Terraform review** | Review time reduced 87% (15 min to 2 min), senior escalations reduced 40%, error diagnosis time cut 60% | [TerraGuide AI](projects/terraGuide-ai.md) |
 | **AI release documentation** | Deployment guide creation reduced 95% (2-4 hours to 5-10 minutes), error rate fell from ~10-15% to under 2% | [AI Release Notes Generator](projects/ai-release-notes.md) |
 | **Agent-first platform work** | Three workspaces use the same agent-first operating model; 28 structured documents on the primary platform are indexed and mechanically validated | [Agent-First Operating Model](projects/agent-first-operating-model.md) |
+| **AI agent evaluation** | Designed 6 public-data challenge cards and reviewed all 7 hackathon submissions with an agent-assisted, two-pass repository workflow | [AI Hackathon Governance](projects/quantori-ai-hackathon-2026.md) |
 | **Enterprise shared platform reuse** | Two greenfield projects reuse the same documentation, tooling, and Makefile framework across different AWS accounts and teams | [Enterprise R&D Data Platform](projects/shared-platform-reuse-dx.md) |
 | **IaC and database platform standardization** | 30+ Terraform modules standardized; development time reduced 2-3x; database provisioning overhead cut ~40% | [Quantori IaC Platform](projects/quantori-iac-platform.md) |
 | **Cloud migration under delivery pressure** | 200+ AWS resources imported without drift; infra code coverage moved from 70% to 95%; deployments became 4x faster | [SAP HANA to AWS / Snowflake](projects/sap-hana-snowflake-migration.md) |
@@ -67,6 +69,7 @@ flowchart LR
 | **AI Release Notes Generator** | Terraform module deployment guide generation | Python, Azure OpenAI GPT-4o, Docker, Bitbucket, Confluence API, Vault | [Read](projects/ai-release-notes.md) |
 | **CV-as-a-Code** | Resume data pipeline and role tailoring | Claude Code, Python, RenderCV, Typst, YAML, Git | [Read](projects/cv-as-a-code.md) |
 | **Candidate Feedback Tool** | Structured post-interview feedback generation | Claude Code, internal corporate tooling | [Read](projects/candidate-feedback-tool.md) |
+| **AI Hackathon Governance** | Public-data challenge design, multi-agent evaluation, repository-level judging | LiteLLM, Claude, Gemini, open-weight models, LLM coding agents, git | [Read](projects/quantori-ai-hackathon-2026.md) |
 
 ## Infrastructure & Platform Projects
 
@@ -86,7 +89,7 @@ flowchart LR
 
 | Domain | Tools & Technologies |
 |--------|----------------------|
-| **AI & Automation** | OpenAI API, Claude Code, RAG, prompt engineering, AI agents, repo-readable operating models |
+| **AI & Automation** | OpenAI API, Claude Code, RAG, prompt engineering, AI agents, LLM evaluation, repo-readable operating models |
 | **Cloud** | AWS, Azure |
 | **Containers** | Docker, Kubernetes, Helm, Kustomize, ArgoCD, EKS, AKS |
 | **CI/CD** | GitHub Actions, GitLab CI/CD, Jenkins, Bitbucket, Roadie / Backstage |
