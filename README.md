@@ -47,53 +47,58 @@
 
 ```mermaid
 flowchart LR
-    A["AI-in-DevOps Tools"]
-    B["Platform Engineering"]
-    C["Cloud Migration & Delivery"]
-    D["Database Automation"]
+    subgraph A["AI-in-DevOps Tools"]
+        direction TB
+        A1["Terraform plan risk analysis"] ~~~ A2["Release notes generator"] ~~~ A3["Agent-first operating model"] ~~~ A4["AI agent evaluation"] ~~~ A5["CV-as-code"] ~~~ A6["Candidate feedback automation"]
+    end
+    subgraph B["Platform Engineering"]
+        direction TB
+        B1["Enterprise R&D data platform"] ~~~ B2["Quantori IaC platform"] ~~~ B3["IAD / IDP platform"] ~~~ B4["Demo environment self-service"]
+    end
+    subgraph C["Cloud Migration & Delivery"]
+        direction TB
+        C1["SAP HANA → AWS / Snowflake"] ~~~ C2["MLOps pricing dashboard"] ~~~ C3["Chatbot systems"] ~~~ C4["Clinical ETL tooling"]
+    end
+    subgraph D["Database Automation"]
+        direction TB
+        D1["Day-0 self-service platform"] ~~~ D2["Oracle / PostgreSQL provisioning"]
+    end
+    A ~~~ B ~~~ C ~~~ D
 
-    A --> A1["Terraform plan risk analysis"] & A2["Release notes generator"] & A3["Agent-first operating model"]
-    A --> A4["AI agent evaluation"] & A5["CV-as-code"] & A6["Candidate feedback automation"]
-    B --> B1["Enterprise R&D data platform"] & B2["Quantori IaC platform"]
-    B --> B3["IAD / IDP platform"] & B4["Demo environment self-service"]
-    C --> C1["SAP HANA → AWS / Snowflake"] & C2["MLOps pricing dashboard"]
-    C --> C3["Chatbot systems"] & C4["Clinical ETL tooling"]
-    D --> D1["Day-0 self-service platform"] & D2["Oracle / PostgreSQL provisioning"]
-
-    classDef ai fill:#EDE9FE,stroke:#7C3AED,color:#1E1B4B,stroke-width:2px
-    classDef aiLeaf fill:#F5F3FF,stroke:#A78BFA,color:#1E1B4B
-    classDef core fill:#DBEAFE,stroke:#2563EB,color:#0F172A,stroke-width:2px
+    classDef aiLeaf fill:#F5F3FF,stroke:#7C3AED,color:#1E1B4B
     classDef leaf fill:#F8FAFC,stroke:#94A3B8,color:#0F172A
-    class A ai
     class A1,A2,A3,A4,A5,A6 aiLeaf
-    class B,C,D core
     class B1,B2,B3,B4,C1,C2,C3,C4,D1,D2 leaf
+    style A fill:#EDE9FE,stroke:#7C3AED,stroke-width:2px,color:#1E1B4B
+    style B fill:#EFF6FF,stroke:#2563EB,color:#0F172A
+    style C fill:#EFF6FF,stroke:#2563EB,color:#0F172A
+    style D fill:#EFF6FF,stroke:#2563EB,color:#0F172A
 ```
 
 ## AI & Automation Projects
 
 | Project | Focus | Key stack | |
 |---------|-------|-----------|:-:|
-| **Agent-First Operating Model** | Repo-readable documentation, agent onboarding, tool registries, custom AI workflows | Claude Code, Python, Make, CLI skills | [Read →](projects/agent-first-operating-model.md) |
-| **TerraGuide AI** | Terraform plan risk analysis and failed-apply diagnosis | Python, GPT-4o / GPT-4o-mini, Docker | [Read →](projects/terraGuide-ai.md) |
-| **AI Release Notes Generator** | Terraform module deployment guide generation | Python, Azure OpenAI, Vault, Confluence API | [Read →](projects/ai-release-notes.md) |
-| **AI Hackathon Governance** | Public-data challenge design, multi-agent evaluation, repository-level judging | LiteLLM, Claude, Gemini, coding agents | [Read →](projects/quantori-ai-hackathon-2026.md) |
-| **CV-as-a-Code** | Resume data pipeline and role tailoring | Claude Code, Python, RenderCV, Typst | [Read →](projects/cv-as-a-code.md) |
-| **Candidate Feedback Tool** | Structured post-interview feedback generation | Claude Code, internal tooling | [Read →](projects/candidate-feedback-tool.md) |
+| **Agent-First Operating Model** | Repo-readable documentation, agent onboarding, tool registries, custom AI workflows | Claude Code, Python, Make, CLI skills | [Read](projects/agent-first-operating-model.md) |
+| **TerraGuide AI** | Terraform plan risk analysis and failed-apply diagnosis | Python, GPT-4o / GPT-4o-mini, Docker | [Read](projects/terraGuide-ai.md) |
+| **AI Release Notes Generator** | Terraform module deployment guide generation | Python, Azure OpenAI, Vault, Confluence API | [Read](projects/ai-release-notes.md) |
+| **AI Hackathon Governance** | Public-data challenge design, multi-agent evaluation, repository-level judging | LiteLLM, Claude, Gemini, coding agents | [Read](projects/quantori-ai-hackathon-2026.md) |
+| **CV-as-a-Code** | Resume data pipeline and role tailoring | Claude Code, Python, RenderCV, Typst | [Read](projects/cv-as-a-code.md) |
+| **Candidate Feedback Tool** | Structured post-interview feedback generation | Claude Code, internal tooling | [Read](projects/candidate-feedback-tool.md) |
 
 ## Infrastructure & Platform Projects
 
 | Project | Focus | Key stack | |
 |---------|-------|-----------|:-:|
-| **Enterprise R&D Data Platform** | Fast greenfield delivery on shared corporate AWS/EKS infrastructure | EKS, Argo Workflows, ArgoCD, Terraform | [Read →](projects/shared-platform-reuse-dx.md) |
-| **Quantori IaC Platform** | Terraform module testing, database provisioning, CI/CD standardization | Terraform, Terratest, Checkov, GitHub Actions | [Read →](projects/quantori-iac-platform.md) |
-| **IAD / IDP Platform** | FinOps and monitoring migration on a large internal developer platform | Terragrunt, EKS, AKS, Vault, Prometheus | [Read →](projects/iad-framework.md) |
-| **SAP HANA to AWS / Snowflake Migration** | Cloud migration, Terraform rewrite, CI/CD migration | Terraform, ECS, Aurora DB, Snowflake | [Read →](projects/sap-hana-snowflake-migration.md) |
-| **Booking System for Demo Environments** | Company-wide self-service demo environment provisioning | Lambda, ECS Fargate, SQS, DynamoDB | [Read →](projects/demo-booking-system.md) |
-| **Chatbot Systems** | Stable weekly releases for an internal ML-backed chatbot | Jenkins, Terraform, SageMaker, ECS | [Read →](projects/chatbot-systems.md) |
-| **ETL & Report Generator** | Clinical data infrastructure and CI/CD from project inception | Terraform, ECS, Glue, Lambda | [Read →](projects/etl-report-generator.md) |
-| **Price Elasticity Dashboard** | MLOps architecture for a client pilot | Terraform, EKS, Kubeflow, GitHub Actions | [Read →](projects/price-elasticity-dashboard.md) |
-| **Day-0 Self-Service Platform** | Bank-scale Oracle/PostgreSQL environment automation | Ansible, Jenkins, Python, Oracle | [Read →](projects/day-0-self-service-platform.md) |
+| **Enterprise R&D Data Platform** | Fast greenfield delivery on shared corporate AWS/EKS infrastructure | EKS, Argo Workflows, ArgoCD, Terraform | [Read](projects/shared-platform-reuse-dx.md) |
+| **Quantori IaC Platform** | Terraform module testing, database provisioning, CI/CD standardization | Terraform, Terratest, Checkov, GitHub Actions | [Read](projects/quantori-iac-platform.md) |
+| **IAD / IDP Platform** | FinOps and monitoring migration on a large internal developer platform | Terragrunt, EKS, AKS, Vault, Prometheus | [Read](projects/iad-framework.md) |
+| **SAP HANA to AWS / Snowflake Migration** | Cloud migration, Terraform rewrite, CI/CD migration | Terraform, ECS, Aurora DB, Snowflake | [Read](projects/sap-hana-snowflake-migration.md) |
+| **Booking System for Demo Environments** | Company-wide self-service demo environment provisioning | Lambda, ECS Fargate, SQS, DynamoDB | [Read](projects/demo-booking-system.md) |
+| **Chatbot Systems** | Stable weekly releases for an internal ML-backed chatbot | Jenkins, Terraform, SageMaker, ECS | [Read](projects/chatbot-systems.md) |
+| **ETL & Report Generator** | Clinical data infrastructure and CI/CD from project inception | Terraform, ECS, Glue, Lambda | [Read](projects/etl-report-generator.md) |
+| **Price Elasticity Dashboard** | MLOps architecture for a client pilot | Terraform, EKS, Kubeflow, GitHub Actions | [Read](projects/price-elasticity-dashboard.md) |
+| **Day-0 Self-Service Platform** | Bank-scale Oracle/PostgreSQL environment automation | Ansible, Jenkins, Python, Oracle | [Read](projects/day-0-self-service-platform.md) |
 
 <sub>Full stack for every project is listed at the top of its case study.</sub>
 
