@@ -18,6 +18,24 @@ The question stopped being "do we use AI tools" and became "what does our knowle
 
 ## What I Did
 
+```mermaid
+flowchart LR
+    E["CLAUDE.md entry points<br/>workspace / project / repo"] --> A["AI agent session"]
+    K["3+1 docs with YAML frontmatter<br/>Orientation · Operations · Decisions · WIP"] --> A
+    R["Tool registry + custom skills<br/>Confluence · GitLab · Jira · AWS"] --> A
+    A --> W["Doc / code change"]
+    W --> V["make docs-check<br/>make docs-index"]
+    V -->|"valid"| M["Commit"]
+    V -->|"WIP closed"| K
+
+    classDef ai fill:#EDE9FE,stroke:#7C3AED,color:#1E1B4B,stroke-width:2px
+    classDef io fill:#F8FAFC,stroke:#94A3B8,color:#0F172A
+    classDef out fill:#DCFCE7,stroke:#16A34A,color:#052E16
+    class A ai
+    class E,K,R,W,V io
+    class M out
+```
+
 **Agent-first entry points at every level**
 
 - One `CLAUDE.md` at the workspace root plus one per project (primary app, infra, sister project) — every path an agent can be spawned from has an entry-point brief: role, constraints, doc framework, tool registry, git conventions

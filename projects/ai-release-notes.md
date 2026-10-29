@@ -11,6 +11,22 @@ Operations teams needed a deployment guide for every Terraform module release â€
 
 ## What I Did
 
+```mermaid
+flowchart LR
+    V["Vault<br/>temporary SSH key"] --> G["Clone previous +<br/>current tag"]
+    G --> D["Diff README / CHANGELOG,<br/>Terraform version, prerequisites"]
+    D --> P["Few-shot prompt with<br/>conditional sections"]
+    P --> L["Azure OpenAI GPT-4o<br/>temperature 0.2"]
+    L --> C["Confluence page<br/>sorted by version + TOC"]
+
+    classDef ai fill:#EDE9FE,stroke:#7C3AED,color:#1E1B4B,stroke-width:2px
+    classDef io fill:#F8FAFC,stroke:#94A3B8,color:#0F172A
+    classDef out fill:#DCFCE7,stroke:#16A34A,color:#052E16
+    class L ai
+    class V,G,D,P io
+    class C out
+```
+
 Built a Dockerized tool that:
 1. Clones two versions of a module repository (current and previous tags via temporary SSH keys from HashiCorp Vault)
 2. Computes diffs of `README.md` and `CHANGELOG.md` between versions

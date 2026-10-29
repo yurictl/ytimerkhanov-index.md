@@ -11,6 +11,24 @@ Terraform plan outputs for large infrastructure platforms can be 50 KB+ of dense
 
 ## What I Did
 
+```mermaid
+flowchart LR
+    P["terraform plan<br/>(50 KB+)"] --> T["Token management"]
+    F["failed terraform apply"] --> T
+    T --> L["GPT-4o-mini<br/>temperature 0.2"]
+    L --> R["Change summary +<br/>risk level LOW…CRITICAL"]
+    L --> D["Error class +<br/>resolution steps"]
+    R --> O["PR comment / ChatOps"]
+    D --> O
+
+    classDef ai fill:#EDE9FE,stroke:#7C3AED,color:#1E1B4B,stroke-width:2px
+    classDef io fill:#F8FAFC,stroke:#94A3B8,color:#0F172A
+    classDef out fill:#DCFCE7,stroke:#16A34A,color:#052E16
+    class L ai
+    class P,F,T io
+    class R,D,O out
+```
+
 Built a CLI tool that ingests a Terraform plan output, summarizes changes by resource type and category (Add / Modify in-place / Replace / Destroy), assigns a risk level (LOW / MEDIUM / HIGH / CRITICAL), and publishes the result as a PR comment and into ChatOps.
 
 Key technical decisions:
