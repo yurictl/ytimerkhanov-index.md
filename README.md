@@ -46,11 +46,11 @@
 ## Portfolio Map
 
 ```mermaid
-flowchart TB
-    A["🤖 AI-in-DevOps Tools"]
-    B["🏗️ Platform Engineering"]
-    C["☁️ Cloud Migration & Delivery"]
-    D["🗄️ Database Automation"]
+flowchart LR
+    A["AI-in-DevOps Tools"]
+    B["Platform Engineering"]
+    C["Cloud Migration & Delivery"]
+    D["Database Automation"]
 
     A --> A1["Terraform plan risk analysis"] & A2["Release notes generator"] & A3["Agent-first operating model"]
     A --> A4["AI agent evaluation"] & A5["CV-as-code"] & A6["Candidate feedback automation"]
