@@ -40,8 +40,6 @@ Secrets are managed entirely through Vault with temporary SSH key rotation — n
 
 ## Outcome
 
-- Documentation time reduced 95%: from 2–4 hours to 5–10 minutes per release
-- Error rate fell from ~10–15% to under 2%
-- Consistency reached 100% — all guides follow the same template structure
-- Cost per guide: $0.50–$2 (API) vs. $80–$160 (manual labor)
-- Break-even under 1 month from deployment
+- Authors reviewed a generated draft instead of writing each guide from scratch; one generation run took about a minute
+- Every guide followed the same template structure (enforced by construction)
+- Time savings, error rate and acceptance were not instrumented, so no percentage is claimed. Measuring what one accepted result costs is what my later work on agent verification starts from

@@ -26,7 +26,7 @@
 | Signal | Evidence |
 |--------|----------|
 | **Senior infrastructure depth** | 20 years in tech, 9 years in DevOps, 8 years with AWS, former Oracle DBA with deep SQL tuning background |
-| **AI-in-DevOps differentiator** | Built AI tools for Terraform plan review, release-note generation, CV processing, interview feedback, and agent-first documentation workflows |
+| **AI-in-DevOps differentiator** | Builds the harness around AI agents — verification gates, evaluation sets, human approval boundaries — and has run LLMs in the Terraform review and release path since 2024 |
 | **Platform engineering range** | Internal Developer Platforms, self-service provisioning, multi-repo IaC platforms, Kubernetes delivery, observability, FinOps, CI/CD standardization |
 | **Current positioning** | Designs operating models where engineers and AI agents can work safely from repo-readable documentation, validated workflows, and CLI-driven automation |
 
@@ -34,8 +34,8 @@
 
 | Result | Proof point | What changed | Case study |
 |:------:|-------------|--------------|------------|
-| **−87%** | **AI Terraform review** | Review time 15 min → 2 min; senior escalations −40%; error diagnosis time −60% | [TerraGuide AI](projects/terraGuide-ai.md) |
-| **−95%** | **AI release documentation** | Deployment guide creation 2–4 hours → 5–10 minutes; error rate ~10–15% → under 2% | [AI Release Notes Generator](projects/ai-release-notes.md) |
+| **3 sets** | **Agent output verification** | AI grader scored on held-in, held-out and clean fixtures; fail-closed push gate with a 23-assertion zero-LLM suite; 3 reproduced bypasses pinned as regressions | [claude-3plus1-harness](https://github.com/yurictl/claude-3plus1-harness) |
+| **9 checks** | **AI-assisted deploy guardrail** | The model advises, deterministic checks on the rendered manifest block, a human approves; the output schema cannot say "approved" | [Release Copilot Guardrail](https://github.com/yurictl/release-copilot-guardrail) |
 | **2 wk → 2 h** | **Bank-scale self-service automation** | Database environment provisioning across 3,000+ databases | [Day-0 Self-Service Platform](projects/day-0-self-service-platform.md) |
 | **200+** | **Cloud migration under delivery pressure** | AWS resources imported without drift; infra code coverage 70% → 95%; deployments 4x faster | [SAP HANA to AWS / Snowflake](projects/sap-hana-snowflake-migration.md) |
 | **30+** | **IaC and database platform standardization** | Terraform modules standardized; development time 2–3x faster; database provisioning overhead −40% | [Quantori IaC Platform](projects/quantori-iac-platform.md) |
@@ -49,7 +49,7 @@
 flowchart LR
     subgraph A["AI-in-DevOps Tools"]
         direction TB
-        A1["Terraform plan risk analysis"] ~~~ A2["Release notes generator"] ~~~ A3["Agent-first operating model"] ~~~ A4["AI agent evaluation"] ~~~ A5["CV-as-code"] ~~~ A6["Candidate feedback automation"]
+        A1["Agent verification harness"] ~~~ A2["AI deploy guardrail"] ~~~ A3["Agent-first operating model"] ~~~ A4["AI agent evaluation"] ~~~ A5["Terraform review & release notes (2024)"] ~~~ A6["CV-as-code & feedback automation"]
     end
     subgraph B["Platform Engineering"]
         direction TB
@@ -79,6 +79,8 @@ flowchart LR
 
 | Project | Focus | Key stack | |
 |---------|-------|-----------|:-:|
+| **AI Agent Verification Harness** | AI grader, held-out / clean eval sets, fail-closed push gate, escape logging | Claude Code, Python, Bash, Make | [Repo](https://github.com/yurictl/claude-3plus1-harness) |
+| **Release Copilot Guardrail** | AI-assisted Kubernetes deploys with advice, enforcement and approval kept separate | GitHub Actions, Kustomize, OIDC, Python | [Repo](https://github.com/yurictl/release-copilot-guardrail) |
 | **Agent-First Operating Model** | Repo-readable documentation, agent onboarding, tool registries, custom AI workflows | Claude Code, Python, Make, CLI skills | [Read](projects/agent-first-operating-model.md) |
 | **TerraGuide AI** | Terraform plan risk analysis and failed-apply diagnosis | Python, GPT-4o / GPT-4o-mini, Docker | [Read](projects/terraGuide-ai.md) |
 | **AI Release Notes Generator** | Terraform module deployment guide generation | Python, Azure OpenAI, Vault, Confluence API | [Read](projects/ai-release-notes.md) |

@@ -40,8 +40,7 @@ Key technical decisions:
 
 ## Outcome
 
-- Plan review time down 87%: from 15 minutes to 2 minutes
-- Error diagnosis time cut by 60%: from ~45 minutes to ~18 minutes
-- Senior engineer escalations reduced by 40%
-- Junior engineers could conduct independent reviews without escalation
-- Cost per analysis: under $0.003 (AI) vs. ~$20 (manual labor)
+- Junior engineers could review plans independently instead of waiting for a senior (first-hand observation)
+- Cost per analysis under $0.003 with GPT-4o-mini; analyses finished in under 6 seconds (benchmarked on sample plans)
+- During the 2024 rollout, AI-assisted Terraform review became the feature that drew engineers' attention to the wider IDP (qualitative observation)
+- Review-time savings were not instrumented, so no percentage is claimed. Measuring what one accepted result costs is what my later work on agent verification starts from
